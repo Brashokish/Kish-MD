@@ -4,13 +4,12 @@
   
 <p align="center">  
   <a href="https://youtube.com/channel/UCLUS9v7q4JagAqIJ3eeMM8w">   
-    <img src="https://telegra.ph/file/054986c17ed343e74ca6b.jpg"width="500" height="500"/>
+    <img src="https://telegra.ph/file/a2404cf4912a775f17164.jpg"width="500" height="500"/>
 </p>
 </br>
-
 </br>
 </br>
-
+    
 # Setup For Deployment 👇
 
 Fork the repo
@@ -42,22 +41,7 @@ Get Session ID (Server 2)
   <a href="https://studio.mogenius.com/studio/cloud-space/cloud-space-overview"><img title="A17 on Mogenius" src="https://img.shields.io/badge/DEPLOY MOGENIUS-h?color=blue&style=for-the-badge&logo=genius"width="220" height="38.45"/></a></p>
 </a>
 
-# Install Manually 👇
-
-## `Requirements`
-
-* [Node.js](https://nodejs.org/en/)
-
-* [Git](https://git-scm.com/downloads)
-
-* [FFmpeg](https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2020-12-08-13-03/ffmpeg-n4.3.1-26-gca55240b8c-win64-gpl-4.3.zip)
-
-* [Libwebp](https://developers.google.com/speed/webp/download)
-
-* Any text editor
-
-
-## `For Termux/Ssh/Ubuntu`
+## For Termux/Ssh/Ubuntu
 
 ```bash
 
