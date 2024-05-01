@@ -20,9 +20,10 @@ Fork the repo
 
 
 ## ` Pair with WhatsApp`
-<h2 align="left">  <a href="https://kish-md-pairing.onrender.com/pair/"><img src="https://play-lh.googleusercontent.com/901aMQFFnVoX2T-YuJmTIwpPve_SUgMv_QSyzMSPtAqt_l0CyXN1DxfD6xXU0r2f9iM=w240-h480-rw" width="90" />
-</a>
-</h2>
+Get Session ID (Server 1)
+    <br>
+<a href='https://legacy-md-qr-0bb55e165afb.herokuapp.com' target="_blank"><img alt='SESSION ID' src='https://img.shields.io/badge/Session_id-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=red'/></a>
+
 
 ## ` Scan with WhatsApp`
 <h2 align="left">  <a href="https://replit.com/@brashokish/Qr-scanner-Kish-Md?v=1"><img src="https://play-lh.googleusercontent.com/901aMQFFnVoX2T-YuJmTIwpPve_SUgMv_QSyzMSPtAqt_l0CyXN1DxfD6xXU0r2f9iM=w240-h480-rw" width="90" />
