@@ -102,13 +102,9 @@ npm start
 npm i -g pm2 && pm2 start  index.js && pm2 save && pm2 logs
 
 ```
-<br>
-<br>
- <h2 align="center"> 🔖Thanks to
-</h2>
-
-1. **KISH𓅃**
-
-2. **MGTOPHAZ**
+## ```Bot Support Groups```
+<p align="center">
+<a href="https://chat.whatsapp.com/LhBwWwQAS4y93XOsCKpxdv"><img src="https://img.shields.io/badge/Join support group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"width="220" height="38.45"/></a>
+</p>
 
 
