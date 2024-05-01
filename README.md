@@ -32,14 +32,14 @@ Get Session ID (Server 2)
 ## DEPLOY TO HEROKU
 <p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Brashokish/Kish-MD)"> <img src="https://img.shields.io/badge/Heroku%20Deploy-magneta?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 <br>
-<a href="https://railway.app/new"><img src="https://railway.app/button.svg" />
+<p align="center"><a href="https://railway.app"> <img src="https://img.shields.io/badge/RailWay%20Account-blue?style=for-the-badge&logo=Railway" width="220" height="38.45"/></a></p>
 <br>
 <br>
-  <a href="https://github.com/codespaces/new"><img title="A17 on Gitub Codespace" src="https://img.shields.io/badge/DEPLOY CODESPACE-h?color=black&style=for-the-badge&logo=visualstudiocode" />
+  <a href="https://github.com/codespaces/new"><img title="KISH on Gitub Codespace" src="https://img.shields.io/badge/DEPLOY CODESPACE-h?color=black&style=for-the-badge&logo=visualstudiocode"width="220" height="38.45"/></a></p>
 </a>
   <br>
 <br>
-  <a href="https://studio.mogenius.com/studio/cloud-space/cloud-space-overview"><img title="A17 on Mogenius" src="https://img.shields.io/badge/DEPLOY MOGENIUS-h?color=blue&style=for-the-badge&logo=genius"></a>
+  <a href="https://studio.mogenius.com/studio/cloud-space/cloud-space-overview"><img title="A17 on Mogenius" src="https://img.shields.io/badge/DEPLOY MOGENIUS-h?color=blue&style=for-the-badge&logo=genius"width="220" height="38.45"/></a></p>
 </a>
 
 # Install Manually 👇
