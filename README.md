@@ -11,24 +11,6 @@
 </br>
 </br>
 
-## ```Connect With Me```
-
-<p align="center">
-
-<a href="https://api.whatsapp.com/send?phone=254745936840&text=𝘩𝘦𝘭𝘭𝘰+𝘮𝘢𝘴𝘵𝘦𝘳"><img src="https://img.shields.io/badge/Contact KISH𓅃-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-
-</p>
-
-
-
-## ```Bot Support Groups```
-<p align="center">
-
-<a href="https://chat.whatsapp.com/LhBwWwQAS4y93XOsCKpxdv"><img src="https://img.shields.io/badge/Join support group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-
-</p>
-
-
 # Setup For Deployment 👇
 
 Fork the repo
@@ -85,16 +67,6 @@ Fork the repo
 
 * Any text editor
 
-## ` BUILDPACKS`
-
-```
-
-
-https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
-
-https://github.com/clhuang/heroku-buildpack-webp-binaries.git
-
-```
 
 ## `For Termux/Ssh/Ubuntu`
 
