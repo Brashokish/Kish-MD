@@ -1,8 +1,8 @@
 {
     "name": "Kish-MD",
     "description": "A WhatsApp bot based on Baileysjs with Multi-Device support",
-    "repository": "https://github.com/Brashokish/Kish-Md",
-    "logo": "https://telegra.ph/file/351133422917a8bd7d776.jpg",
+    "repository": "https://github.com/Brashokish/Kish-MD",
+    "logo": "https://telegra.ph/file/bdc74677d13ec63ce7264.jpg",
     "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
     "buildpacks": [
       {
