@@ -63,7 +63,12 @@
         "openai": "^3.1.0",
         "youtubedl-core": "^4.11.5"
     },
-      "bugs": {
-    "url": "https://github.com/Brashokish/Kish-MD/issues"
-   }
-}
+         "repository": { 
+     "type": "git", 
+     "url": "git+https://github.com/Brashokish/Kish-MD.git" 
+   }, 
+   "bugs": { 
+     "url": "https://github.com/Brashokish/Kish-MD/issues" 
+   }, 
+   "homepage": "https://github.com/Brashokish/Kish-MD#readme" 
+    }
