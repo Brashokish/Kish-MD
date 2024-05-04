@@ -5,7 +5,7 @@ const chalk = require('chalk')
 global.ownernumber = ['254745936840']
 global.ownername = "KISH"//owner name
 global.ytname = "YT: KishBotz.inc"
-global.socialm = "GitHub: KISH-MD"
+global.socialm = "GitHub: Kish-MD"
 global.location = "Kenya"
 
 global.botname = 'KISH-MD' //name of the bot
