@@ -63,12 +63,14 @@
         "openai": "^3.1.0",
         "youtubedl-core": "^4.11.5"
     },
-         "repository": { 
-     "type": "git", 
-     "url": "git+https://github.com/Brashokish/Kish-MD.git" 
-   }, 
-   "bugs": { 
-     "url": "https://github.com/Brashokish/Kish-MD/issues" 
-   }, 
-   "homepage": "https://github.com/Brashokish/Kish-MD#readme" 
+         homepage": "https://github.com/Brashokish/Kish-MD",
+    "author": {
+        "name": "GURU"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Guru322/GURU-BOT.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Guru322/GURU-BOT/issues"
     }
