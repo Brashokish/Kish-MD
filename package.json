@@ -65,12 +65,12 @@
     },
          homepage": "https://github.com/Brashokish/Kish-MD",
     "author": {
-        "name": "GURU"
+        "name": "KISH"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Guru322/GURU-BOT.git"
+        "url": "git+https://github.com/Brashokish/Kish-MD.git"
     },
     "bugs": {
-        "url": "https://github.com/Guru322/GURU-BOT/issues"
+        "url": "https://github.com/Brashokish/Kish-MD/issues"
     }
