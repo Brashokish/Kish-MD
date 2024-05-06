@@ -21,7 +21,7 @@ Fork the repo
 ## ` Pair with WhatsApp`
 Get Session ID (Server 1)
     <br>
-<a href='https://kish-md-pair-2c6a7d35cc1e.herokuapp.com/pair' target="_blank"><img alt='SESSION ID' src='https://img.shields.io/badge/Session_id-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=red'/></a>
+<a href='https://kish-bot-d744c65bbba2.herokuapp.com/pair' target="_blank"><img alt='SESSION ID' src='https://img.shields.io/badge/Session_id-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=red'/></a>
 
 
 Get Session ID (Server 2)
