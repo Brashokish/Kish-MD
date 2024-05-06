@@ -196,11 +196,11 @@ let index = 0;
 function printRainbowMessage() {
   const color = rainbowColors[index];
   console.log(chalk.keyword(color)('\n\n⏳️waiting for messages'));
-  index = (index + 1) % rainbowColors.length;
-  setTimeout(printRainbowMessage, 60000);  // Adjust the timeout for desired speed
+//  index = (index + 1) % rainbowColors.length;
+//  setTimeout(printRainbowMessage, 60000);  // Adjust the timeout for desired speed
 }
 
-pintRainbowMessage();
+//pintRainbowMessage();
 }
 
     
