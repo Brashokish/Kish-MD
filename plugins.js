@@ -1,5 +1,6 @@
 require('./Config')
 const pino = require('pino')
+const autobio = process.env.AUTOBIO || 'TRUE';
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
 const moment = require('moment-timezone');
@@ -13,7 +14,6 @@ const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetch, await, 
 const { default: KishConnect, delay, PHONENUMBER_MCC, makeCacheableSignalKeyStore, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto, Browsers } = require("@whiskeysockets/baileys")
 const NodeCache = require("node-cache")
 const Pino = require("pino")
-const readline = require("readline")
 const { parsePhoneNumber } = require("libphonenumber-js")
 const makeWASocket = require("@whiskeysockets/baileys").default
 
@@ -29,20 +29,16 @@ let owner = JSON.parse(fs.readFileSync('./Gallery/database/owner.json'))
 
 const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
 const useMobile = process.argv.includes("--mobile")
-
-const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
-const question = (text) => new Promise((resolve) => rl.question(text, resolve))
          
 async function startKish() {
-//------------------------------------------------------
-let { version, isLatest } = await fetchLatestBaileysVersion()
-const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
+    let { version, isLatest } = await fetchLatestBaileysVersion()
+    const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
     const msgRetryCounterCache = new NodeCache() // for retry message, "waiting message"
     const Kish = makeWASocket({
       logger: pino({ level: 'silent' }),
       printQRInTerminal: !pairingCode, // popping up QR in terminal log
       mobile: useMobile, // mobile api (prone to bans)
-      browser: Browsers.ubuntu('Chrome'), // for this issues https://github.com/WhiskeySockets/Baileys/issues/328
+      browser: Browsers.ubuntu('Firefox'), // for this issues https://github.com/WhiskeySockets/Baileys/issues/328
       auth: state,
       markOnlineOnConnect: true, // set false for offline
       generateHighQualityLinkPreview: true, // make high preview link
@@ -57,6 +53,29 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
    })
    
    store.bind(Kish.ev)
+
+	setInterval(() => { 
+
+                                 const date = new Date() 
+
+                         Kish.updateProfileStatus( 
+
+                                         `KISH-MD  is active 24/7\n\n${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Nairobi'})}.` 
+
+                                 ) 
+
+                         }, 10 * 1000) 
+
+    if (pairingCode && !Kish.authState.creds.registered) {
+      if (useMobile) throw new Error('Cannot use pairing code with mobile api')
+      // Handling pairing code setup removed
+   }
+
+    // Kish event handling code remains unchanged
+}
+
+startKish()
+			      
 
     // login use pairing code
    // source code https://github.com/WhiskeySockets/Baileys/blob/master/Example/example.ts#L61
