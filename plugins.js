@@ -12,6 +12,7 @@ const { Boom } = require('@hapi/boom')
 const fs = require('fs')
 const moment = require('moment-timezone');
 const FileType = require('file-type')
+const figlet = require("figlet")
 const path = require('path')
 const axios = require('axios')
 const PhoneNumber = require('awesome-phonenumber')
