@@ -58,9 +58,10 @@
         "word-definition": "^2.1.6",
         "set-cookie": "^0.0.4",
         "translate-google-api": "^1.0.4",
-        "yt-search": "^2.10.3",
+        "yt-search": "^2.10.4",
         "youtube-yts": "^2.0.0",
-        "ytdl-core": "^4.11.5",
+       
+ "ytdl-core": "git+ssh://git@github.com:khlevon/node-ytdl-core.git#v4.11.4-patch.2", 
         "openai": "^3.1.0",
         "youtubedl-core": "^4.11.5"
         },
