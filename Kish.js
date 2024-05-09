@@ -1552,7 +1552,7 @@ reply(`_Downloading ${infoYt.videoDetails.title}_`);
             console.log("Audio downloaded ! \n Size: " + fileSizeInMegabytes);
             if (fileSizeInMegabytes <= 200) {
                 //sendFile(from, fs.readFileSync(`./${randomName}`), msg, { audio: true, jpegThumbnail: (await getBuffer(dl.meta.image)).buffer, unlink: true })
-                await client.sendMessage(
+                await Kish.sendMessage(
                     from, {
                         document: fs.readFileSync(`./${randomName}`),
                         mimetype: "audio/mpeg",
