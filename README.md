@@ -14,20 +14,14 @@
 
 Fork the repo
     <br>
-<a href='https://github.com/Brashokish/Kish-MD/fork' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/Fork Repo-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=blue'/></a>
+<a href='https://github.com/Brashokish/Kish-MD/fork' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/Fork Repo-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=blue'
 
 
 
-## ` Pair with WhatsApp`
-Get Session ID (Server 1)
-    <br>
-<a href='https://kish-bot-d744c65bbba2.herokuapp.com/pair' target="_blank"><img alt='SESSION ID' src='https://img.shields.io/badge/Session_id-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=red'/></a>
-
-
-Get Session ID (Server 2)
-    <br>
-<a href='https://kish-web-qr.onrender.com/' target="_blank"><img alt='SESSION ID' src='https://img.shields.io/badge/Session_id-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=red'/></a>
-
+### Pair with WhatsApp`
+  <a href="https://phoenix-mdsessionid-0ae5aea325e1.herokuapp.com"><img title="Phoenix-MD Session ID" src="https://img.shields.io/badge/GET SESSION -h?color=red&style=for-the-badge&logo=msi" width="220" height="38.45"/></a></p>
+  
+  
 ## DEPLOY TO HEROKU
 <p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Brashokish/Kish-MD)"> <img src="https://img.shields.io/badge/Heroku%20Deploy-magneta?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 <br>
