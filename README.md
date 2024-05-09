@@ -14,7 +14,7 @@
 
 ## Fork the repo
     
-<a href="https://github.com/AbhishekSuresh2/Phoenix-MD/fork"><img title="Phoenix-MD" src="https://img.shields.io/badge/FORK Phoenix MD-h?color=black&style=for-the-badge&logo=stackshare"></a>
+<a href="https://github.com/Brashokish/Kish-MD/fork"><img title="Phoenix-MD" src="https://img.shields.io/badge/FORK Kish MD-h?color=black&style=for-the-badge&logo=stackshare"></a>
 
 
 ### Pair with WhatsApp`
