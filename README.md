@@ -12,10 +12,9 @@
     
 # Setup For Deployment 👇
 
-Fork the repo
-    <br>
-<a href='https://github.com/Brashokish/Kish-MD/fork' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/Fork Repo-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=blue'
-
+## Fork the repo
+    
+<a href="https://github.com/AbhishekSuresh2/Phoenix-MD/fork"><img title="Phoenix-MD" src="https://img.shields.io/badge/FORK Phoenix MD-h?color=black&style=for-the-badge&logo=stackshare"></a>
 
 
 ### Pair with WhatsApp`
