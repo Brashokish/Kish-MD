@@ -26,7 +26,8 @@ const { toAudio, toPTT, toVideo, ffmpeg, addExifAvatar } = require('./Gallery/li
 const { smsg, getGroupAdmins, formatp, jam, formatDate, getTime, isUrl, await, sleep, clockString, msToDate, sort, toNumber, enumGetKey, runtime, fetchJson, getBuffer, json, delay, format, logic, generateProfilePicture, parseMention, getRandom, pickRandom, reSize } = require('./Gallery/lib/myfunc')
 let afk = require("./Gallery/lib/afk");
 const { fetchBuffer, buffergif } = require("./Gallery/lib/myfunc2")
-
+const yts = require("yt-search");
+const ytdl = require("ytdl-core");
 /////log
 global.modnumber = '254745936840' 
 //Gallery/database
