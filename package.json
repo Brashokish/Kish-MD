@@ -26,7 +26,7 @@
         "cheerio": "^1.0.0-rc.12",
         "cookie": "^0.5.0",
         "file-type": "^16.5.3",
-    "figlet": "^1.5.2",
+        "figlet": "^1.5.2",
         "fluent-ffmpeg": "^2.1.2",
         "form-data": "^4.0.0",
         "fs-extra": "^11.1.1",
