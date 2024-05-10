@@ -686,7 +686,7 @@ console.log("Weather data:",daa);
         const description = daa.weather[0].description;
         const humidity = daa.main.humidity;
         const windSpeed = daa.wind.speed;
-        const rainVolume = daa.rain ? data.rain['1h'] : 0;
+        const rainVolume = daa.rain ? daa.rain['1h'] : 0;
         const cloudiness = daa.clouds.all;
         const sunrise = new Date(daa.sys.sunrise * 1000);
         const sunset = new Date(daa.sys.sunset * 1000);
