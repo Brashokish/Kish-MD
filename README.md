@@ -17,7 +17,7 @@
 <a href="https://github.com/Brashokish/Kish-MD/fork"><img title="Phoenix-MD" src="https://img.shields.io/badge/FORK Kish MD-h?color=black&style=for-the-badge&logo=stackshare"></a>
 
 
-### Pair with WhatsApp`
+### Pair with WhatsApp
   <a href="https://kish-bot-cfa6416f5122.herokuapp.com/"><img title="Phoenix-MD Session ID" src="https://img.shields.io/badge/GET SESSION -h?color=red&style=for-the-badge&logo=msi" width="220" height="38.45"/></a></p>
   
   
@@ -34,51 +34,6 @@
   <a href="https://studio.mogenius.com/studio/cloud-space/cloud-space-overview"><img title="A17 on Mogenius" src="https://img.shields.io/badge/DEPLOY MOGENIUS-h?color=blue&style=for-the-badge&logo=genius"width="220" height="38.45"/></a></p>
 </a>
 
-## For Termux/Ssh/Ubuntu
-
-```bash
-
-apt update
-
-apt upgrade
-
-pkg update && pkg upgrade
-
-pkg install bash
-
-pkg install libwebp
-
-pkg install git -y
-
-pkg install nodejs -y 
-
-pkg install ffmpeg -y 
-
-pkg install wget
-
-pkg install yarn
-
-pkg install imagemagick -y
-
-git clone https://github.com/Brashokish/Kish-MD
-
-cd Kish-MD
-
-rm -rf session
-
-yarn install
-
-npm start
-
-```
-
-## `For 24/7 Activation (Termux)`
-
-```bash
-
-npm i -g pm2 && pm2 start  index.js && pm2 save && pm2 logs
-
-```
 ## ```Bot Support Groups```
 <p align="center">
 <a href="https://chat.whatsapp.com/LhBwWwQAS4y93XOsCKpxdv"><img src="https://img.shields.io/badge/Join support group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"width="220" height="38.45"/></a>
@@ -87,3 +42,4 @@ npm i -g pm2 && pm2 start  index.js && pm2 save && pm2 logs
 ### THANKS TO:
 - [***MG TOPHAZ***](https://github.com/MGTOPHAZ) For several Cmds Addition.
 
+- [***Fortunatusmokaya***](https://github.com/Fortunatusmokaya) For several Cmds Addition
