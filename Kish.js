@@ -671,10 +671,40 @@ break
 
         Kish.sendMessage(from, { react: { text: "🌫️", key: m.key }}) 
         if (!args[0]) return reply("Enter your location to search weather.")
-        myweather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args.join(" ")}&units=metric&appid=e409825a497a0c894d2dd975542234b0&language=tr`)
 
-        const weathertext = `           ⛅ *Weather Report* ⛅  \n\n🔎 *Search Location:* ${myweather.data.name}\n*🌐 Country:* ${myweather.data.sys.country}\n🌈 *Weather:* ${myweather.data.weather[0].description}\n *Temperature:* ${myweather.data.main.temp}°C\n🌡️ *Minimum Temperature:* ${myweather.data.main.temp_min}°C\n🔥 *Maximum Temperature:* ${myweather.data.main.temp_max}°C\n❄️ *Humidity:* ${myweather.data.main.humidity}%\n🌬️ *Wind:* ${myweather.data.wind.speed} km/h\n`
-        Kish.sendMessage(from, { video: { url: 'https://media.tenor.com/bC57J4v11UcAAAPo/weather-sunny.mp4' }, gifPlayback: true, caption: weathertext }, { quoted: m })
+const resp = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${args.join(" ")}&units=metric&appid=1ad47ec6172f19dfaf89eb3307f74785`);
+        const daa = await resp.json();
+
+console.log("Weather data:",daa);
+
+
+        const cityName = daa.name;
+        const temperature = daa.main.temp;
+        const feelsLike = daa.main.feels_like;
+        const minTemperature = daa.main.temp_min;
+        const maxTemperature = daa.main.temp_max;
+        const description = data.weather[0].description;
+        const humidity = daa.main.humidity;
+        const windSpeed = daa.wind.speed;
+        const rainVolume = daa.rain ? data.rain['1h'] : 0;
+        const cloudiness = daa.clouds.all;
+        const sunrise = new Date(daa.sys.sunrise * 1000);
+        const sunset = new Date(daa.sys.sunset * 1000);
+
+
+Kish.sendMessage(from, { video: { url: 'https://media.tenor.com/bC57J4v11UcAAAPo/weather-sunny.mp4' }, gifPlayback: true, caption: `❄️ Weather in ${cityName}
+
+🌡️ Temperature: ${temperature}°C
+📝 Description: ${description}
+❄️ Humidity: ${humidity}%
+🌀 Wind Speed: ${windSpeed} m/s
+🌧️ Rain Volume (last hour): ${rainVolume} mm
+☁️ Cloudiness: ${cloudiness}%
+🌄 Sunrise: ${sunrise.toLocaleTimeString()}
+🌅 Sunset: ${sunset.toLocaleTimeString()}` }, { quoted: m })
+
+
+
 
         break;
             case 'setexif':
