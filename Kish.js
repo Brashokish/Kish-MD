@@ -683,7 +683,7 @@ console.log("Weather data:",daa);
         const feelsLike = daa.main.feels_like;
         const minTemperature = daa.main.temp_min;
         const maxTemperature = daa.main.temp_max;
-        const description = data.weather[0].description;
+        const description = daa.weather[0].description;
         const humidity = daa.main.humidity;
         const windSpeed = daa.wind.speed;
         const rainVolume = daa.rain ? data.rain['1h'] : 0;
