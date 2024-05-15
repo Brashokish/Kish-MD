@@ -17,6 +17,9 @@
 <a href="https://github.com/Brashokish/Kish-MD/fork"><img title="Phoenix-MD" src="https://img.shields.io/badge/FORK Kish MD-h?color=black&style=for-the-badge&logo=stackshare"></a>
 
 
+- Upload the creds.json that you received to the session folder.
+### Change owner number `config.js` & Gallery/database/owner.js
+
 ### Pair with WhatsApp
   <a href="https://kish-bot-cfa6416f5122.herokuapp.com/"><img title="Phoenix-MD Session ID" src="https://img.shields.io/badge/GET SESSION -h?color=red&style=for-the-badge&logo=msi" width="220" height="38.45"/></a></p>
   
