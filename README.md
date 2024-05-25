@@ -3,7 +3,7 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=F710B1&center=true&width=910&height=100&lines=I'M+KISH-MD;Multi+Device+Whatsapp+Bot;" alt="Typing SVG" /></a>
   
 <p align="center">  
-  <a href="https://youtube.com/channel/UCLUS9v7q4JagAqIJ3eeMM8w">   
+  <a href="https://youtube.com/Brashokish">   
     <img src="https://telegra.ph/file/a2404cf4912a775f17164.jpg"width="500" height="500"/>
 </p>
 </br>
@@ -14,14 +14,14 @@
 
 ## Fork the repo
     
-<a href="https://github.com/Brashokish/Kish-MD/fork"><img title="Phoenix-MD" src="https://img.shields.io/badge/FORK Kish MD-h?color=black&style=for-the-badge&logo=stackshare"></a>
+<a href="https://github.com/Brashokish/Kish-MD/fork"><img title="Kish-MD" src="https://img.shields.io/badge/FORK Kish MD-h?color=black&style=for-the-badge&logo=stackshare"></a>
 
 
 - Upload the creds.json that you received to the session folder.
 ### Change owner number `config.js` & Gallery/database/owner.js
 
 ### Pair with WhatsApp
-  <a href="https://kish-bot-cfa6416f5122.herokuapp.com/"><img title="Phoenix-MD Session ID" src="https://img.shields.io/badge/GET SESSION -h?color=red&style=for-the-badge&logo=msi" width="220" height="38.45"/></a></p>
+  <a href="https://kish-md.blogspot.com/?m=1"><img title="Kish-MD Session ID" src="https://img.shields.io/badge/GET SESSION -h?color=red&style=for-the-badge&logo=msi" width="220" height="38.45"/></a></p>
   
   
 ## DEPLOY TO HEROKU
