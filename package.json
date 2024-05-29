@@ -21,7 +21,7 @@
         "@adiwajshing/keyed-db": "^0.2.4",
         "@hapi/boom": "^10.0.1",
         "awesome-phonenumber": "^5.9.0",
-        "axios": "^1.4.0",
+        "axios": "^1.4.1",
         "chalk": "^4.1.2",
         "cheerio": "^1.0.0-rc.12",
         "cookie": "^0.5.0",
