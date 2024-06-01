@@ -21,7 +21,7 @@
 ### Change owner number `config.js` & Gallery/database/owner.js
 
 ### Pair with WhatsApp
-  <a href="https://kish-md.blogspot.com/?m=1"><img title="Kish-MD Session ID" src="https://img.shields.io/badge/GET SESSION -h?color=red&style=for-the-badge&logo=msi" width="220" height="38.45"/></a></p>
+  <a href="https://kish-md-pairing.onrender.com/"><img title="Kish-MD Session ID" src="https://img.shields.io/badge/GET SESSION -h?color=red&style=for-the-badge&logo=msi" width="220" height="38.45"/></a></p>
   
   
 ## DEPLOY TO HEROKU
