@@ -39,7 +39,7 @@
 
 ### ✧✧ Follow this Tutorial for Kish-Md  free and safe Deployment 
 
-  <a href="https://youtu.be/KNu-gr2h7bo"><img src="https://img.shields.io/badge/Tutorial-Video-ff0000?style=for-the-badge&logo=youtube&logoColor=ff000000&link=https://youtu.be/pn769zbeVXU?si=l4ZScy_qHVP4C6uG" /><br>
+  <a href="https://youtu.be/pn769zbeVXU?si=l4ZScy_qHVP4C6uG"><img src="https://img.shields.io/badge/Tutorial-Video-ff0000?style=for-the-badge&logo=youtube&logoColor=ff000000&link=https://youtu.be/pn769zbeVXU?si=l4ZScy_qHVP4C6uG" /><br>
 
      
 ## ```Bot Support Groups```
