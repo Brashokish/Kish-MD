@@ -37,6 +37,42 @@
   <a href="https://studio.mogenius.com/studio/cloud-space/cloud-space-overview"><img title="A17 on Mogenius" src="https://img.shields.io/badge/DEPLOY MOGENIUS-h?color=blue&style=for-the-badge&logo=genius"width="220" height="38.45"/></a></p>
 </a>
 
+# For Termux 
+
+<details>
+<summary>Read more</summary>
+  <br>
+
+
+pkg update && pkg upgrade
+
+pkg install bash
+
+pkg install libwebp
+
+pkg install git -y
+
+pkg install nodejs -y 
+
+pkg install ffmpeg -y 
+
+pkg install wget
+
+pkg install yarn
+
+pkg install imagemagick -y
+
+git clone https://github.com/Brashokish/Kish-Md
+
+cd Kish-Md
+
+rm -rf session
+
+npm i 
+
+node index.js
+
+
 ### ✧✧ Follow this Tutorial for Kish-Md  free and safe Deployment 
 
   <a href="https://youtu.be/pn769zbeVXU?si=l4ZScy_qHVP4C6uG"><img src="https://img.shields.io/badge/Tutorial-Video-ff0000?style=for-the-badge&logo=youtube&logoColor=ff000000&link=https://youtu.be/pn769zbeVXU?si=l4ZScy_qHVP4C6uG" /><br>
