@@ -37,12 +37,15 @@
   <a href="https://studio.mogenius.com/studio/cloud-space/cloud-space-overview"><img title="A17 on Mogenius" src="https://img.shields.io/badge/DEPLOY MOGENIUS-h?color=blue&style=for-the-badge&logo=genius"width="220" height="38.45"/></a></p>
 </a>
 
-# For Termux 
+# ✧✧Install Manually 👇
 
 <details>
 <summary>Read more</summary>
-  <br>
 
+<br>
+
+- Termux
+```js
 
 pkg update && pkg upgrade
 
