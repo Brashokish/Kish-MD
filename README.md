@@ -19,7 +19,7 @@
 
 
 
-- Upload the creds.json that you received to the session folder.
+ Upload the creds.json that you received to the session folder.
 ### Change owner number `config.js` & Gallery/database/owner.js
 
 ### Pair with WhatsApp
