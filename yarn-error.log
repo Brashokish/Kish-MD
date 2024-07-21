@@ -23,7 +23,7 @@ Trace:
 
 npm manifest: 
   {
-      "name": "XBug-Bot",
+      "name": "Kish-MD",
       "version": "3.0.0",
       "description": "WhatsApp War Bot Using Nodejs",
       "main": "index.js",
