@@ -16,10 +16,9 @@
     
 <a href="https://github.com/Brashokish/Kish-MD/fork"><img title="Kish-MD" src="https://img.shields.io/badge/FORK Kish MD-h?color=black&style=for-the-badge&logo=stackshare"></a>
 
-<a href = "https://github.com/Brashokish/Kish-MD/fork"> <img src = "/repo-data/fork-Kish-repo-button.svg" width="150" height="70" ></a>
 
-<a href = "https://gpt-qr-code.onrender.com/elisa"> <img src = "/repo-data/elisa scan qr code.svg" width="150" height="70" > </a></br>
-    OR   
+
+
 - Upload the creds.json that you received to the session folder.
 ### Change owner number `config.js` & Gallery/database/owner.js
 
