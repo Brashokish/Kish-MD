@@ -4,7 +4,7 @@
   
 <p align="center">  
   <a href="https://youtube.com/Brashokish">   
-    <img src="https://telegra.ph/file/a2404cf4912a775f17164.jpg"width="500" height="500"/>
+    <img src="https://ibb.co/7C232g9"width="500" height="500"/>
 </p>
 </br>
 </br>
@@ -67,7 +67,7 @@ pkg install yarn
 
 pkg install imagemagick -y
 
-git clone https://github.com/Brashokish/Kish-MD
+git clone https://github.com/CytraK/Kish-MD
 
 cd Kish-MD
 
