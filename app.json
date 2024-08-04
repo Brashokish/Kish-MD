@@ -1,8 +1,8 @@
 {
-    "name": "Kish-MD",
+    "name": "Cytra-MD",
     "description": "A WhatsApp bot based on Baileysjs with Multi-Device support",
-    "repository": "https://github.com/Brashokish/Kish-MD",
-    "logo": "https://telegra.ph/file/f6c385bf4ad626118d3d9.jpg",
+    "repository": "https://github.com/CytraK/Kish-MD",
+    "logo": "https://ibb.co/7C232g9",
     "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
     "buildpacks": [
       {
