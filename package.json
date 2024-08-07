@@ -19,7 +19,7 @@
         "@adiwajshing/baileys": "^5.0.0",
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^4.2.3",
-        "@distube/ytdl-core": "^4.13.7",
+        "@distube/ytdl-core": "^4.14.3",
         "@google-cloud/vision": "^4.3.0",
         "@hapi/boom": "^10.0.1",
         "@whiskeysockets/baileys": "6.5.0",
