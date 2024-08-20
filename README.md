@@ -14,7 +14,10 @@
 
 ## Fork the repo
     
-<a href="https://github.com/Brashokish/Kish-MD/fork"><img title="Kish-MD" src="https://img.shields.io/badge/FORK Kish MD-h?color=black&style=for-the-badge&logo=stackshare"></a>
+<div align="center">
+    <a href="https://github.com/Brashokish/Kish-MD/fork">
+        <img title="Kish-MD" src="https://img.shields.io/badge/FORK%20Kish%20MD-FF5733?style=for-the-badge&logo=stackshare" />
+    </a>
 
 
 
@@ -23,21 +26,44 @@
 ### Change owner number `config.js` & Gallery/database/owner.js
 
 ### Pair with WhatsApp
-  <a href="https://kish-md-pairing.onrender.com/"><img title="Kish-MD Session ID" src="https://img.shields.io/badge/GET SESSION -h?color=red&style=for-the-badge&logo=msi" width="220" height="38.45"/></a></p>
+  <div align="center">
+    <a href="https://kish-md-pairing.onrender.com/">
+        <img title="Kish-MD Session ID" src="https://img.shields.io/badge/GET%20SESSION-FF5733?style=for-the-badge&logo=msi&logoColor=white" width="220" height="38.45" />
+    </a>
+</div>
   
   
-## DEPLOY TO HEROKU
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Brashokish/Kish-MD)"> <img src="https://img.shields.io/badge/Heroku%20Deploy-magneta?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<h2 style="color: #8E44AD; font-family: 'Courier New';">DEPLOY TO HEROKU</h2>
+<p align="center">
+    <a href="https://dashboard.heroku.com/new?template=https://github.com/Brashokish/Kish-MD">
+        <img src="https://img.shields.io/badge/Heroku%20Deploy-9B59B6?style=for-the-badge&logo=heroku" width="220" height="38.45" />
+    </a>
+</p>
 <br>
-<p align="center"><a href="https://railway.app"> <img src="https://img.shields.io/badge/RailWay%20Account-blue?style=for-the-badge&logo=Railway" width="220" height="38.45"/></a></p>
+<p align="center">
+    <a href="https://railway.app">
+        <img src="https://img.shields.io/badge/RailWay%20Account-3498DB?style=for-the-badge&logo=Railway" width="220" height="38.45" />
+    </a>
+</p>
 <br>
+<p align="center">
+    <a href="https://github.com/codespaces/new">
+        <img title="KISH on GitHub Codespace" src="https://img.shields.io/badge/DEPLOY%20CODESPACE-2ECC71?style=for-the-badge&logo=visualstudiocode" width="220" height="38.45" />
+    </a>
+</p>
 <br>
-  <a href="https://github.com/codespaces/new"><img title="KISH on Gitub Codespace" src="https://img.shields.io/badge/DEPLOY CODESPACE-h?color=black&style=for-the-badge&logo=visualstudiocode"width="220" height="38.45"/></a></p>
-</a>
-  <br>
-<br>
-  <a href="https://studio.mogenius.com/studio/cloud-space/cloud-space-overview"><img title="A17 on Mogenius" src="https://img.shields.io/badge/DEPLOY MOGENIUS-h?color=blue&style=for-the-badge&logo=genius"width="220" height="38.45"/></a></p>
-</a>
+<p align="center">
+    <a href="https://studio.mogenius.com/studio/cloud-space/cloud-space-overview">
+        <img title="A17 on Mogenius" src="https://img.shields.io/badge/DEPLOY%20MOGENIUS-1ABC9C?style=for-the-badge&logo=genius" width="220" height="38.45" />
+    </a>
+</p>
+
+<h2 style="color: #F39C12; font-family: 'Lucida Console';">✧✧Install Manually 👇</h2>
+
+<details>
+    <summary style="color: #16A085;">Read more</summary>
+    <br>
+    <pre style="background-color: #F0F0F0; padding: 10px; border-radius: 5px;">
 
 # ✧✧Install Manually 👇
 
