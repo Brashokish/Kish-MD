@@ -2,35 +2,35 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 //contact details
-global.ownernumber = ['254745936840']
-global.ownername = "KISH"//owner name
-global.ytname = "YT: Kish-MD"
-global.socialm = "GitHub: Kish-MD"
+global.ownernumber = ['243972681974']
+global.ownername = "KENAN"//owner name
+global.ytname = "YT: "
+global.socialm = "GitHub: darkkenan"
 global.location = "Kenya"
 
-global.botname = 'KISH-MD' //name of the bot
+global.botname = 'KENAN' //name of the bot
 
 //sticker details
-global.stickername = 'KISH-MD'
+global.stickername = 'KENAN'
 global.packname = 'Sticker By'
-global.author = 'Kish Bot'
+global.author = 'KENAN'
 //console view/theme
-global.themeemoji = '𓅃'
-global.wm = "Kish botz inc."
+global.themeemoji = '✏️'
+global.wm = "KENAN botz inc."
 
 //theme link
-//global.link = 'https://chat.whatsapp.com/LhBwWwQAS4y93XOsCKpxdv'
+//global.link = 'https://wa.me/243972681974'
 
 //custom prefix
-global.prefa = ['.']
+global.prefa = [':']
 
 //false=disable and true=enable
-global.welcome = false //auto welcome
+global.welcome = true //auto welcome
 global.autoRecording = false //auto recording
 global.autoTyping = true //auto typing
 global.autorecordtype = false //auto typing + recording
 global.autoread = false //auto read messages
-global.autobio = false //auto update bio
+global.autobio = true //auto update bio
 global.anti212 = true //auto block +212
 global.autoread_status = true //auto view status/story
 
