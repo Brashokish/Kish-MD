@@ -1,4 +1,5 @@
- const ytdl = require('youtubedl-core');
+
+ const ytdl = require('@distube/ytdl-core');
  const yts = require('youtube-yts');
  const readline = require('readline');
  const ffmpeg = require('fluent-ffmpeg')
@@ -139,7 +140,7 @@
              const search = getTrack[0]//await this.searchTrack(query)
              const videoInfo = await ytdl.getInfo('https://www.youtube.com/watch?v=' + search.id, { lang: 'id' });
              let stream = ytdl(search.id, { filter: 'audioonly', quality: 140 });
-             let songPath = `./Zimbot/${randomBytes(3).toString('hex')}.mp3`
+             let songPath = `./Gallery/audio/${randomBytes(3).toString('hex')}.mp3`
              stream.on('error', (err) => console.log(err))
  
              const file = await new Promise((resolve) => {
@@ -205,7 +206,7 @@
              url = this.isYTUrl(url) ? 'https://www.youtube.com/watch?v=' + this.getVideoID(url) : url
              const { videoDetails } = await ytdl.getInfo(url, { lang: 'id' });
              let stream = ytdl(url, { filter: 'audioonly', quality: 140 });
-             let songPath = `./Zimbot/${randomBytes(3).toString('hex')}.mp3`
+             let songPath = `./Gallery/audio/${randomBytes(3).toString('hex')}.mp3`
  
              let starttime;
              stream.once('response', () => {
