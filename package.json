@@ -1,6 +1,6 @@
 {
     "name": "Kish-MD",
-    "version": "3.0",
+    "version": "4.0",
     "description": "WhatsApp Bot Using Nodejs",
     "main": "index.js",
     "type": "commonjs",
