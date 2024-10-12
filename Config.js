@@ -26,8 +26,8 @@ global.prefa = ['.']
 
 //false=disable and true=enable
 global.welcome = false //auto welcome
-global.autoRecording = false //auto recording
-global.autoTyping = true //auto typing
+global.autoRecording = true //auto recording
+global.autoTyping = false //auto typing
 global.autorecordtype = false //auto typing + recording
 global.autoread = false //auto read messages
 global.autobio = false //auto update bio
@@ -38,7 +38,7 @@ global.autoread_status = true //auto view status/story
 
 //reply messages
 global.mess = {
-    done: '*here you go!* \n\n*🎀 Kish Bot 🎀*\n\n*🧩 Bot link:* \nhttps://github.com/Brashokish/Kish-MD\n',
+    done: '*here you go!* \n\n*🎀 Kish MD 🎀*\n\n*🧩 Bot link:* \nhttps://github.com/Brashokish/Kish-MD\n',
     prem: '*This feature can be used by premium user only*',
     admin: '*This feature can be used by admin only*',
     botAdmin: '*This feature can only be used when the bot is a group admin* ',
