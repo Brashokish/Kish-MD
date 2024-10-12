@@ -16,7 +16,6 @@
     "author": "Kish",
     "license": "MIT",
     "dependencies": {
-        "@adiwajshing/baileys": "^5.0.0",
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^4.2.3",
         "@distube/ytdl-core": "^4.14.3",
