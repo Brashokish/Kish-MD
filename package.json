@@ -17,6 +17,7 @@
     "license": "MIT",
     "dependencies": {
         "@adiwajshing/keyed-db": "^0.2.4",
+        "@adiwajshing/baileys": "^5.0.0",
         "@bochilteam/scraper": "^4.2.3",
         "@distube/ytdl-core": "^4.14.3",
         "@fantox01/lyrics-scraper": "^3.0.1",
