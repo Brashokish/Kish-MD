@@ -72,7 +72,7 @@
 
 <br>
 
-- Termux
+- TERMUX
 ```js
 
 pkg update && pkg upgrade
