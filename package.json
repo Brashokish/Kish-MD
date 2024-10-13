@@ -26,7 +26,7 @@
         "@google/generative-ai": "^0.20.0",
         "@hapi/boom": "^10.0.1",
         "@mrnima/facebook-downloader": "^1.0.0",
-        "@whiskeysockets/baileys": "6.5.0",
+        "@whiskeysockets/baileys": "latest",
         "@xaviabot/fb-downloader": "^1.0.14",
         "acrcloud": "^1.4.0",
         "aptoide-scraper": "^1.0.1",
