@@ -14,7 +14,7 @@ Platform:
   android arm64
 
 Trace: 
-  Error [ERR_SOCKET_CONNECTION_TIMEOUT]: Socket connection 
+  Error [ERR_SOCKET_CONNECTION_TIMEOUT]: Socket connection timeout
       at new NodeError (node:internal/errors:399:5)
       at internalConnectMultiple (node:net:1099:20)
       at Timeout.internalConnectMultipleTimeout (node:net:1638:3)
