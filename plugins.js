@@ -1,1 +1,363 @@
-const _0x5420a2=_0x319f;function _0x5716(){const _0x47fb09=['./Config','keys','log','notify','includes','sendContact','ephemeralMessage','push','chat-update','path','status','messages','Incoming\x20call:','remoteJid','type','ubuntu','hasNewMessage','2210734krMWeR','user','@whiskeysockets/baileys','creds','child','ownername','254745936840','startsWith','\x0aFN:','test','uncaughtException','moment-timezone','Welcome\x20to\x20Kish-md','decodeJid','messages.update','server','name','@g.us','group-participants.update','getNumber','Welcome\x20to\x20the\x20group,\x20@','from','You\x20missed\x20a\x20call!','requestPairingCode','all','cyan','black','open','getName','join','29276768elOYBu','length','registered','1066290ZiuDqX','\x0aitem1.X-ABLabel:Ponsel\x0aitem2.EMAIL;type=INTERNET:okeae2410@gmail.com\x0aitem2.X-ABLabel:Email\x0aitem3.URL:https://instagram.com/cak_haho\x0aitem3.X-ABLabel:Instagram\x0aitem4.ADR:;;Indonesia;;;;\x0aitem4.X-ABLabel:Region\x0aEND:VCARD','stdin',',\x20you\x20will\x20be\x20missed!','fromMe','argv','parse','withoutContact','output','--mobile','remove','Your\x20WhatsApp\x20bot\x20number\x0aFor\x20example:\x20+254745936840\x20:\x20','𝐊𝐢𝐬𝐡-𝐌𝐃\x20𝒊𝑺\x20𝑪𝒐𝒏𝒏𝒆𝒄𝒕𝒆𝒅!','BAE5','isArray','Message\x20received\x20with\x20ID:\x20','message-receipt.update','messages.upsert','./session','bgBlack','contacts','axios','silent','4251438iurLmt','message','replace','split','./Gallery/database/owner.json','readFileSync','exit','extendedTextMessage','close','some','error','WhatsApp','international','loggedOut','readMessages','unhandledRejection','node-cache','statusCode','1690250ZzFNmC','@s.whatsapp.net','Goodbye\x20@','group-update','./Kish','pino','4516308ernDnD','creds.update','public','Received\x20message:\x20','Uncaught\x20Exception:','subject','endsWith','libphonenumber-js','white','@hapi/boom','0@s.whatsapp.net','match','21uDWZOj','contacts.update','call','92470dOtFoy','file-type','prefa','green','loadMessage','red','question','BEGIN:VCARD\x0aVERSION:3.0\x0aN:','blue','Start\x20with\x20country\x20code\x20of\x20your\x20WhatsApp\x20Number,\x20Example\x20:\x20+254745936840','bind','--pairing-code','key','sendMessage','readline','status@broadcast','groupMetadata','./Gallery/lib/exif','forEach','Message\x20updated:\x20','\x0aitem1.TEL;waid=','Cannot\x20use\x20pairing\x20code\x20with\x20mobile\x20api','redBright','Your\x20Pairing\x20Code:\x20','authState','purple','missed','createInterface','greenBright'];_0x5716=function(){return _0x47fb09;};return _0x5716();}(function(_0x36824e,_0x395f70){const _0x57564e=_0x319f,_0x132a9c=_0x36824e();while(!![]){try{const _0x59aa3a=-parseInt(_0x57564e(0xef))/0x1+-parseInt(_0x57564e(0x90))/0x2+-parseInt(_0x57564e(0xc8))/0x3+-parseInt(_0x57564e(0xe0))/0x4+parseInt(_0x57564e(0xda))/0x5+parseInt(_0x57564e(0xb1))/0x6*(parseInt(_0x57564e(0xec))/0x7)+parseInt(_0x57564e(0xae))/0x8;if(_0x59aa3a===_0x395f70)break;else _0x132a9c['push'](_0x132a9c['shift']());}catch(_0x36598d){_0x132a9c['push'](_0x132a9c['shift']());}}}(_0x5716,0xc012b),require(_0x5420a2(0x7f)));const pino=require(_0x5420a2(0xdf)),{Boom}=require(_0x5420a2(0xe9)),fs=require('fs'),moment=require(_0x5420a2(0x9b)),chalk=require('chalk'),FileType=require(_0x5420a2(0xf0)),path=require(_0x5420a2(0x88)),axios=require(_0x5420a2(0xc6)),Config=require(_0x5420a2(0x7f)),PhoneNumber=require('awesome-phonenumber'),{imageToWebp,videoToWebp,writeExifImg,writeExifVid}=require(_0x5420a2(0x100)),{smsg,isUrl,generateMessageTag,getBuffer,getSizeMedia,fetch,await,sleep,reSize}=require('./Gallery/lib/myfunc.js'),{default:KishConnect,delay,PHONENUMBER_MCC,makeCacheableSignalKeyStore,useMultiFileAuthState,DisconnectReason,fetchLatestBaileysVersion,generateForwardMessageContent,prepareWAMessageMedia,generateWAMessageFromContent,generateMessageID,downloadContentFromMessage,makeInMemoryStore,getAggregateVotesInPollMessage,jidDecode,proto,Browsers}=require(_0x5420a2(0x92)),NodeCache=require(_0x5420a2(0xd8)),readline=require(_0x5420a2(0xfd)),{parsePhoneNumber}=require(_0x5420a2(0xe7)),prefix=global[_0x5420a2(0xf1)]||'.',makeWASocket=require(_0x5420a2(0x92))['default'],store=makeInMemoryStore({'logger':pino()[_0x5420a2(0x94)]({'level':_0x5420a2(0xc7),'stream':'store'})});let phoneNumber=_0x5420a2(0x96),owner=JSON[_0x5420a2(0xb7)](fs[_0x5420a2(0xcd)](_0x5420a2(0xcc)));const pairingCode=!!phoneNumber||process['argv'][_0x5420a2(0x83)](_0x5420a2(0xfa)),useMobile=process[_0x5420a2(0xb6)][_0x5420a2(0x83)](_0x5420a2(0xba)),rl=readline[_0x5420a2(0x10a)]({'input':process[_0x5420a2(0xb3)],'output':process['stdout']}),question=_0x2e86bb=>new Promise(_0x426210=>rl[_0x5420a2(0xf5)](_0x2e86bb,_0x426210));async function startKish(){const _0x286f8e=_0x5420a2;let {version:_0x187d02,isLatest:_0x47d275}=await fetchLatestBaileysVersion();const {state:_0x2e363d,saveCreds:_0x4360c9}=await useMultiFileAuthState(_0x286f8e(0xc3)),_0x5b3b75=new NodeCache(),_0x24ebdf=makeWASocket({'logger':pino({'level':_0x286f8e(0xc7)}),'printQRInTerminal':!pairingCode,'mobile':useMobile,'browser':Browsers[_0x286f8e(0x8e)]('Chrome'),'auth':_0x2e363d,'markOnlineOnConnect':!![],'generateHighQualityLinkPreview':!![],'getMessage':async _0x13d0dc=>{const _0x3181a8=_0x286f8e;let _0x3535e4=jidNormalizedUser(_0x13d0dc[_0x3181a8(0x8c)]),_0x4d3fdd=await store[_0x3181a8(0xf3)](_0x3535e4,_0x13d0dc['id']);return _0x4d3fdd?.[_0x3181a8(0xc9)]||'';},'msgRetryCounterCache':_0x5b3b75,'defaultQueryTimeoutMs':undefined});store[_0x286f8e(0xf9)](_0x24ebdf['ev']);if(pairingCode&&!_0x24ebdf[_0x286f8e(0x107)][_0x286f8e(0x93)][_0x286f8e(0xb0)]){if(useMobile)throw new Error(_0x286f8e(0x104));let _0x40ba21;!!_0x40ba21?(_0x40ba21=_0x40ba21['replace'](/[^0-9]/g,''),!Object[_0x286f8e(0x80)](PHONENUMBER_MCC)[_0x286f8e(0xd1)](_0x42b3d9=>_0x40ba21[_0x286f8e(0x97)](_0x42b3d9))&&(console['log'](chalk[_0x286f8e(0xc4)](chalk[_0x286f8e(0x105)](_0x286f8e(0xf8)))),process[_0x286f8e(0xce)](0x0))):(_0x40ba21=await question(chalk['bgBlack'](chalk['greenBright'](_0x286f8e(0xbc)))),_0x40ba21=_0x40ba21[_0x286f8e(0xca)](/[^0-9]/g,''),!Object[_0x286f8e(0x80)](PHONENUMBER_MCC)[_0x286f8e(0xd1)](_0x4e826b=>_0x40ba21[_0x286f8e(0x97)](_0x4e826b))&&(console[_0x286f8e(0x81)](chalk[_0x286f8e(0xc4)](chalk[_0x286f8e(0x105)]('Start\x20with\x20country\x20code\x20of\x20your\x20WhatsApp\x20Number,\x20Example\x20:\x20+254745936840'))),_0x40ba21=await question(chalk[_0x286f8e(0xc4)](chalk[_0x286f8e(0x7e)]('Your\x20WhatsApp\x20bot\x20number\x20please\x0aFor\x20example:\x20+919931122319:\x20'))),_0x40ba21=_0x40ba21[_0x286f8e(0xca)](/[^0-9]/g,''),rl[_0x286f8e(0xd0)]())),setTimeout(async()=>{const _0x25bf11=_0x286f8e;let _0x56bf86=await _0x24ebdf[_0x25bf11(0xa7)](_0x40ba21);_0x56bf86=_0x56bf86?.[_0x25bf11(0xeb)](/.{1,4}/g)?.['join']('-')||_0x56bf86,console[_0x25bf11(0x81)](chalk[_0x25bf11(0xaa)](chalk['bgGreen'](_0x25bf11(0x106))),chalk['black'](chalk[_0x25bf11(0xe8)](_0x56bf86)));},0xbb8);}_0x24ebdf['ev']['on'](_0x286f8e(0xed),_0x2a0266=>{const _0x51c418=_0x286f8e;for(let _0x15f6e6 of _0x2a0266){let _0x3074a6=_0x24ebdf['decodeJid'](_0x15f6e6['id']);if(store&&store[_0x51c418(0xc5)])store['contacts'][_0x3074a6]={'id':_0x3074a6,'name':_0x15f6e6[_0x51c418(0x82)]};}}),_0x24ebdf['ev']['on'](_0x286f8e(0xc2),async _0x49daf4=>{const _0xaeed86=_0x286f8e;try{const _0x77185b=_0x49daf4[_0xaeed86(0x8a)][0x0];if(!_0x77185b['message'])return;_0x77185b[_0xaeed86(0xc9)]=Object[_0xaeed86(0x80)](_0x77185b[_0xaeed86(0xc9)])[0x0]===_0xaeed86(0x85)?_0x77185b[_0xaeed86(0xc9)][_0xaeed86(0x85)][_0xaeed86(0xc9)]:_0x77185b[_0xaeed86(0xc9)];_0x77185b[_0xaeed86(0xfb)]&&_0x77185b[_0xaeed86(0xfb)][_0xaeed86(0x8c)]===_0xaeed86(0xfe)&&(autoread_status&&await _0x24ebdf[_0xaeed86(0xd6)]([_0x77185b[_0xaeed86(0xfb)]]));if(!_0x24ebdf[_0xaeed86(0xe2)]&&!_0x77185b[_0xaeed86(0xfb)][_0xaeed86(0xb5)]&&_0x49daf4[_0xaeed86(0x8d)]===_0xaeed86(0x82))return;if(_0x77185b['key']['id']['startsWith'](_0xaeed86(0xbe))&&_0x77185b['key']['id'][_0xaeed86(0xaf)]===0x10)return;const _0x3d822d=smsg(_0x24ebdf,_0x77185b,store);require(_0xaeed86(0xde))(_0x24ebdf,_0x3d822d,_0x49daf4,store);}catch(_0x3b95ff){console[_0xaeed86(0x81)](_0x3b95ff);}}),_0x24ebdf[_0x286f8e(0x84)]=async(_0x2fd552,_0x585dfd,_0x3d2d48='',_0x321ee0={})=>{const _0x20c8c3=_0x286f8e;let _0x46c794=[];for(let _0x34840e of _0x585dfd){_0x46c794[_0x20c8c3(0x86)]({'displayName':await _0x24ebdf['getName'](_0x34840e+_0x20c8c3(0xdb)),'vcard':_0x20c8c3(0xf6)+await _0x24ebdf[_0x20c8c3(0xac)](_0x34840e+_0x20c8c3(0xdb))+_0x20c8c3(0x98)+await _0x24ebdf[_0x20c8c3(0xac)](_0x34840e+_0x20c8c3(0xdb))+_0x20c8c3(0x103)+_0x34840e+':'+_0x34840e+_0x20c8c3(0xb2)});}_0x24ebdf[_0x20c8c3(0xfc)](_0x2fd552,{'contacts':{'displayName':global[_0x20c8c3(0x95)],'contacts':_0x46c794},..._0x321ee0},{'quoted':_0x3d2d48});},_0x24ebdf[_0x286f8e(0x9d)]=_0x2ea69f=>{const _0x5cbda2=_0x286f8e;if(!_0x2ea69f)return _0x2ea69f;if(/:\d+@/gi[_0x5cbda2(0x99)](_0x2ea69f)){let _0x48e3d5=jidDecode(_0x2ea69f)||{};return _0x48e3d5[_0x5cbda2(0x91)]&&_0x48e3d5[_0x5cbda2(0x9f)]&&_0x48e3d5['user']+'@'+_0x48e3d5[_0x5cbda2(0x9f)]||_0x2ea69f;}else return _0x2ea69f;},_0x24ebdf['getName']=(_0x54fa8c,_0x109028=![])=>{const _0x31227c=_0x286f8e;id=_0x24ebdf[_0x31227c(0x9d)](_0x54fa8c),_0x109028=_0x24ebdf[_0x31227c(0xb8)]||_0x109028;let _0x51715b;if(id[_0x31227c(0xe6)](_0x31227c(0xa1)))return new Promise(async _0x5a2753=>{const _0x380d92=_0x31227c;_0x51715b=store[_0x380d92(0xc5)][id]||{};if(!(_0x51715b[_0x380d92(0xa0)]||_0x51715b[_0x380d92(0xe5)]))_0x51715b=_0x24ebdf[_0x380d92(0xff)](id)||{};_0x5a2753(_0x51715b[_0x380d92(0xa0)]||_0x51715b[_0x380d92(0xe5)]||PhoneNumber('+'+id['replace'](_0x380d92(0xdb),''))['getNumber'](_0x380d92(0xd4)));});else _0x51715b=id===_0x31227c(0xea)?{'id':id,'name':_0x31227c(0xd3)}:id===_0x24ebdf[_0x31227c(0x9d)](_0x24ebdf['user']['id'])?_0x24ebdf[_0x31227c(0x91)]:store[_0x31227c(0xc5)][id]||{};return(_0x109028?'':_0x51715b[_0x31227c(0xa0)])||_0x51715b['subject']||_0x51715b['verifiedName']||PhoneNumber('+'+_0x54fa8c[_0x31227c(0xca)]('@s.whatsapp.net',''))[_0x31227c(0xa3)]('international');},_0x24ebdf['public']=![],_0x24ebdf['serializeM']=_0xc2d0fb=>smsg(_0x24ebdf,_0xc2d0fb,store);let _0x2f2db0=![];_0x24ebdf['ev']['on']('connection.update',async _0x3955a2=>{const _0x382779=_0x286f8e,{connection:_0x1d2321,lastDisconnect:_0x33f754}=_0x3955a2;if(_0x1d2321==_0x382779(0xab)&&!_0x2f2db0)console[_0x382779(0x81)](chalk[_0x382779(0xf2)](_0x382779(0x9c))),console[_0x382779(0x81)](chalk['gray']('\x0a\x0aInitializing...')),await delay(0x7d0),console[_0x382779(0x81)](chalk[_0x382779(0xa9)]('\x0a\x0aConnected')),_0x24ebdf['sendMessage'](_0x24ebdf[_0x382779(0x91)]['id'],{'text':_0x382779(0xbd)}),_0x2f2db0=!![];else _0x1d2321==='close'&&(console['log']('Connection\x20closed,\x20attempting\x20to\x20reconnect...',_0x3955a2),_0x33f754[_0x382779(0xd2)][_0x382779(0xb9)][_0x382779(0xd9)]!==DisconnectReason[_0x382779(0xd5)]?startKish():console['log']('Logged\x20out,\x20please\x20delete\x20session\x20file\x20and\x20scan\x20again.'));}),_0x24ebdf['ev']['on'](_0x286f8e(0xe1),async()=>{await _0x4360c9();}),_0x24ebdf['ev']['on'](_0x286f8e(0xa2),async _0x27a3fa=>{const _0x1b4f52=_0x286f8e,{id:_0x49c986,participants:_0xe045,action:_0x2dfc1b}=_0x27a3fa;console[_0x1b4f52(0x81)]('Group\x20participant\x20updated:\x20'+_0x2dfc1b+'\x20'+_0xe045[_0x1b4f52(0xad)](',\x20'));if(_0x2dfc1b==='add')for(let _0x27c384 of _0xe045){await _0x24ebdf[_0x1b4f52(0xfc)](_0x49c986,{'text':_0x1b4f52(0xa4)+_0x27c384[_0x1b4f52(0xcb)]('@')[0x0]+'!'},{'mentions':[_0x27c384]});}else{if(_0x2dfc1b===_0x1b4f52(0xbb))for(let _0x32a442 of _0xe045){await _0x24ebdf[_0x1b4f52(0xfc)](_0x49c986,{'text':_0x1b4f52(0xdc)+_0x32a442[_0x1b4f52(0xcb)]('@')[0x0]+_0x1b4f52(0xb4)},{'mentions':[_0x32a442]});}}}),_0x24ebdf['ev']['on']('message-receipt.update',async _0x5b02cc=>{const _0x46db1a=_0x286f8e,{receiptIds:_0x54acf8}=_0x5b02cc;Array['isArray'](_0x54acf8)&&_0x54acf8[_0x46db1a(0x101)](async _0x194d68=>{const _0x1b588f=_0x46db1a;console[_0x1b588f(0x81)](_0x1b588f(0xc0)+_0x194d68);});}),_0x24ebdf['ev']['on'](_0x286f8e(0xc1),async _0x4ba343=>{const _0xe5ae89=_0x286f8e,{receiptIds:_0x286868}=_0x4ba343;Array['isArray'](_0x286868)&&_0x286868[_0xe5ae89(0x101)](async _0x5c26f8=>{const _0x327b03=_0xe5ae89;console[_0x327b03(0x81)](_0x327b03(0xc0)+_0x5c26f8);});});let _0x23143b=0x0;const _0x32fc45=[_0x286f8e(0xf4),'yellow',_0x286f8e(0xf2),_0x286f8e(0xf7),_0x286f8e(0x108)],_0x350a1b=_0x32fc45[_0x23143b];_0x24ebdf['ev']['on'](_0x286f8e(0x9e),async _0x486be8=>{const _0x58a977=_0x286f8e;if(Array[_0x58a977(0xbf)](_0x486be8))for(let _0x498ea4 of _0x486be8){console[_0x58a977(0x81)](chalk['keyword'](_0x350a1b)('\x0a\x0a🎇waiting\x20for\x20messages'));}}),_0x24ebdf['ev']['on']('messages.update',async _0xf1e23c=>{const _0x5e2124=_0x286f8e;for(let _0x5939c9 of _0xf1e23c){console[_0x5e2124(0x81)](_0x5e2124(0x102)+_0x5939c9);}}),_0x24ebdf['ev']['on'](_0x286f8e(0xdd),async _0x4e4fe7=>{const _0x261042=_0x286f8e,{id:_0x4e265a,metadata:_0x40c339}=_0x4e4fe7;console[_0x261042(0x81)]('Group\x20metadata\x20updated\x20for\x20'+_0x4e265a+':',_0x40c339);}),_0x24ebdf['ev']['on'](_0x286f8e(0xee),async _0x3f326d=>{const _0x45b5a3=_0x286f8e;console['log'](_0x45b5a3(0x8b),_0x3f326d),_0x3f326d[_0x45b5a3(0x89)]===_0x45b5a3(0x109)&&await _0x24ebdf['sendMessage'](_0x3f326d[_0x45b5a3(0xa5)],{'text':_0x45b5a3(0xa6)});}),_0x24ebdf['ev']['on'](_0x286f8e(0x87),async _0x45eb2b=>{const _0x1dad98=_0x286f8e;if(_0x45eb2b&&_0x45eb2b[_0x1dad98(0x8f)]){const _0x4dba9a=_0x45eb2b[_0x1dad98(0x8a)][_0x1dad98(0xa8)]()[0x0];if(_0x4dba9a&&_0x4dba9a[_0x1dad98(0xc9)]){const _0x40a5d0=_0x4dba9a[_0x1dad98(0xc9)]['conversation']||_0x4dba9a['message'][_0x1dad98(0xcf)]?.['text'];_0x40a5d0&&console[_0x1dad98(0x81)](_0x1dad98(0xe3)+_0x40a5d0);}}}),process['on'](_0x286f8e(0x9a),_0x10d51a=>{const _0x127e8b=_0x286f8e;console['error'](_0x127e8b(0xe4),_0x10d51a);}),process['on'](_0x286f8e(0xd7),_0x1e28b5=>{const _0x4b8300=_0x286f8e;console[_0x4b8300(0xd2)]('Unhandled\x20Rejection:',_0x1e28b5);});}function _0x319f(_0x1a5dc6,_0xe4ceaa){const _0x571670=_0x5716();return _0x319f=function(_0x319f0b,_0xf1dd0c){_0x319f0b=_0x319f0b-0x7e;let _0x2714b2=_0x571670[_0x319f0b];return _0x2714b2;},_0x319f(_0x1a5dc6,_0xe4ceaa);}startKish();
+/* ehe ? */
+
+
+
+
+
+
+require('./Config')
+const pino = require('pino')
+const { Boom } = require('@hapi/boom')
+const fs = require('fs')
+const moment = require('moment-timezone');
+const FileType = require('file-type')
+const figlet = require("figlet")
+const path = require('path')
+const axios = require('axios')
+const PhoneNumber = require('awesome-phonenumber')
+const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./Gallery/lib/exif')
+const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetch, await, sleep, reSize } = require('./Gallery/lib/myfunc')
+const { default: KishConnect, delay, PHONENUMBER_MCC, makeCacheableSignalKeyStore, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto, Browsers } = require("@whiskeysockets/baileys")
+const NodeCache = require("node-cache")
+const Pino = require("pino")
+const readline = require("readline")
+const { parsePhoneNumber } = require("libphonenumber-js")
+const makeWASocket = require("@whiskeysockets/baileys").default
+const chalk = require("chalk");
+const store = makeInMemoryStore({
+    logger: pino().child({
+        level: 'silent',
+        stream: 'store'
+    })
+})
+
+let phoneNumber = "254745936840"
+let owner = JSON.parse(fs.readFileSync('./Gallery/database/owner.json'))
+
+const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
+const useMobile = process.argv.includes("--mobile")
+
+const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
+const question = (text) => new Promise((resolve) => rl.question(text, resolve))
+const color = (text, color) => {
+  return !color ? chalk.green(text) : chalk.keyword(color)(text);
+};
+         
+async function startKish() {
+//------------------------------------------------------
+
+const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
+    const msgRetryCounterCache = new NodeCache() // for retry message, "waiting message"
+    const Kish = makeWASocket({
+      logger: pino({ level: 'silent' }),
+      printQRInTerminal: !pairingCode, // popping up QR in terminal log
+      mobile: useMobile, // mobile api (prone to bans)
+version: [2, 2413, 1],
+
+      browser: Browsers.ubuntu('Firefox'), // for this issues https://github.com/WhiskeySockets/Baileys/issues/328
+      auth: state,
+      markOnlineOnConnect: true, // set false for offline
+      generateHighQualityLinkPreview: true, // make high preview link
+      getMessage: async (key) => {
+         let jid = jidNormalizedUser(key.remoteJid)
+         let msg = await store.loadMessage(jid, key.id)
+
+         return msg?.message || ""
+      },
+      msgRetryCounterCache, // Resolve waiting messages
+      defaultQueryTimeoutMs: undefined, // for this issues https://github.com/WhiskeySockets/Baileys/issues/276
+   })
+
+store.bind(Kish.ev)
+
+
+
+    Kish.ev.on('messages.upsert', async chatUpdate => {
+        //console.log(JSON.stringify(chatUpdate, undefined, 2))
+        try {
+            const mek = chatUpdate.messages[0]
+            if (!mek.message) return
+            mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
+            if (mek.key && mek.key.remoteJid === 'status@broadcast'){
+            if (autoread_status) {
+            await Kish.readMessages([mek.key]) 
+	    }
+            } 
+            if (!Kish.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
+            if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
+            const m = smsg(Kish, mek, store)
+            require("./Kish")(Kish, m, chatUpdate, store)
+        } catch (err) {
+            console.log(err)
+	}
+    })
+
+   Kish.sendContact = async (jid, kon, quoted = '', opts = {}) => {
+	let list = []
+	for (let i of kon) {
+	    list.push({
+	    	displayName: await Kish.getName(i + '@s.whatsapp.net'),
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await Kish.getName(i + '@s.whatsapp.net')}\nFN:${await Kish.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:okeae2410@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://instagram.com/cak_haho\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;Indonesia;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    })
+	}
+	Kish.sendMessage(jid, { contacts: { displayName: global.ownername, contacts: list }, ...opts }, { quoted })
+    }
+
+    Kish.decodeJid = (jid) => {
+        if (!jid) return jid
+        if (/:\d+@/gi.test(jid)) {
+            let decode = jidDecode(jid) || {}
+            return decode.user && decode.server && decode.user + '@' + decode.server || jid
+        } else return jid
+    }
+
+    Kish.ev.on('contacts.update', update => {
+        for (let contact of update) {
+            let id = Kish.decodeJid(contact.id)
+            if (store && store.contacts) store.contacts[id] = {
+                id,
+                name: contact.notify
+	    }
+	}
+    })
+
+    Kish.getName = (jid, withoutContact = false) => {
+        id = Kish.decodeJid(jid)
+        withoutContact = Kish.withoutContact || withoutContact
+        let v
+        if (id.endsWith("@g.us")) return new Promise(async (resolve) => {
+            v = store.contacts[id] || {}
+            if (!(v.name || v.subject)) v = Kish.groupMetadata(id) || {}
+            resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
+        })
+        else v = id === '0@s.whatsapp.net' ? {
+                id,
+                name: 'WhatsApp'
+            } : id === Kish.decodeJid(Kish.user.id) ?
+            Kish.user :
+            (store.contacts[id] || {})
+        return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
+    }
+    
+    Kish.public = true
+
+    Kish.serializeM = (m) => smsg(Kish, m, store)
+
+Kish.ev.on("connection.update",async  (s) => {
+        const { connection, lastDisconnect } = s
+        if (connection == "open") {
+console.log(chalk.green('🟨Welcome to Kish-md'));
+console.log(chalk.gray('\n\n🚀Initializing...'));
+		await delay(1000 * 2) 
+		
+                        
+console.log(chalk.cyan('\n\n🧩Connected'));		
+Kish.sendMessage(owner + "@s.whatsapp.net", { text: `Bot has started\nCreator: Brasho\n prefix: [.]` });
+
+
+const rainbowColors = ['red', 'yellow', 'green', 'blue', 'purple'];
+let index = 0;
+
+function printRainbowMessage() {
+  const color = rainbowColors[index];
+  console.log(chalk.keyword(color)('\n\n⏳️waiting for messages'));
+//  index = (index + 1) % rainbowColors.length;
+//  setTimeout(printRainbowMessage, 60000);  // Adjust the timeout for desired speed
+}
+
+//pintRainbowMessage();
+}
+
+    
+                if (
+            connection === "close" &&
+            lastDisconnect &&
+            lastDisconnect.error &&
+            lastDisconnect.error.output.statusCode != 401
+        ) {
+            startKish()
+		}
+    })
+    Kish.ev.on('creds.update', saveCreds)
+    Kish.ev.on("messages.upsert",  () => { })
+
+    Kish.sendText = (jid, text, quoted = '', options) => Kish.sendMessage(jid, {
+        text: text,
+        ...options
+    }, {
+        quoted,
+        ...options
+    })
+    Kish.sendTextWithMentions = async (jid, text, quoted, options = {}) => Kish.sendMessage(jid, {
+        text: text,
+        mentions: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net'),
+        ...options
+    }, {
+        quoted
+    })
+    Kish.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
+        let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,` [1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
+        let buffer
+        if (options && (options.packname || options.author)) {
+            buffer = await writeExifImg(buff, options)
+        } else {
+            buffer = await imageToWebp(buff)
+        }
+
+        await Kish.sendMessage(jid, {
+            sticker: {
+                url: buffer
+            },
+            ...options
+        }, {
+            quoted
+        })
+        return buffer
+    }
+    Kish.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
+        let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,` [1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
+        let buffer
+        if (options && (options.packname || options.author)) {
+            buffer = await writeExifVid(buff, options)
+        } else {
+        
+            buffer = await videoToWebp(buff)
+        }
+
+        await Kish.sendMessage(jid, {
+            sticker: {
+                url: buffer
+            },
+            ...options
+        }, {
+            quoted
+        })
+        return buffer
+    }
+    Kish.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
+        let quoted = message.msg ? message.msg : message
+        let mime = (message.msg || message).mimetype || ''
+        let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
+        const stream = await downloadContentFromMessage(quoted, messageType)
+        let buffer = Buffer.from([])
+        for await (const chunk of stream) {
+            buffer = Buffer.concat([buffer, chunk])
+	}
+        let type = await FileType.fromBuffer(buffer)
+        trueFileName = attachExtension ? (filename + '.' + type.ext) : filename
+        // save to file
+        await fs.writeFileSync(trueFileName, buffer)
+        return trueFileName
+    }
+
+//welcome
+Kish.ev.on('group-participants.update', async (anu) => {
+    	if (global.welcome){
+console.log(anu)
+try {
+let metadata = await Kish.groupMetadata(anu.id)
+let participants = anu.participants
+for (let num of participants) {
+try {
+ppuser = await Kish.profilePictureUrl(num, 'image')
+} catch (err) {
+ppuser = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+}
+try {
+ppgroup = await Kish.profilePictureUrl(anu.id, 'image')
+} catch (err) {
+ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
+}
+
+memb = metadata.participants.length
+KishWlcm = await getBuffer(ppuser)
+KishLft = await getBuffer(ppuser)
+                if (anu.action == 'add') {
+                const Kishbuffer = await getBuffer(ppuser)
+                let KishName = num
+                const xtime = moment.tz('Africa/Nairobi').format('HH:mm:ss')
+	            const xdate = moment.tz('Africa/Nairobi').format('DD/MM/YYYY')
+	            const xmembers = metadata.participants.length
+Kishbody = `┌──⊰ 🎗𝑾𝑬𝑳𝑪𝑶𝑴𝑬🎗⊰
+│⊳  🌐 To: ${metadata.subject}
+│⊳  📋 Name: @${KishName.split("@")[0]}
+│⊳  👥 Members: ${xmembers}th
+│⊳  🕰️ Joined: ${xtime} ${xdate}
+└──────────⊰`
+Kish.sendMessage(anu.id,
+ { text: Kishbody,
+ contextInfo:{
+ mentionedJid:[num],
+ "externalAdReply": {"showAdAttribution": true,
+ "containsAutoReply": true,
+ "title": ` ${global.botname}`,
+ "body": `${ownername}`,
+ "previewType": "PHOTO",
+ "thumbnailUrl": ``,
+ "thumbnail": KishWlcm,
+ "sourceUrl": `${link}`}}})
+                } else if (anu.action == 'remove') {
+                	const Kishbuffer = await getBuffer(ppuser)
+                    const Kishtime = moment.tz('Africa/Nairobi').format('HH:mm:ss')
+	                const Kishdate = moment.tz('Africa/Nairobi').format('DD/MM/YYYY')
+                	let KishName = num
+                    const Kishmembers = metadata.participants.length  
+     Kishbody = `┌──⊰🍁𝑭𝑨𝑹𝑬𝑾𝑬𝑳𝑳🍁⊰
+│⊳  👤 From: ${metadata.subject}
+│⊳  📃 Reason: Left
+│⊳  📔 Name: @${KishName.split("@")[0]}
+│⊳  👥 Members: ${Kishmembers}th
+│⊳  🕒 Time: ${Kishtime} ${Kishdate}
+└──────────⊰`
+Kish.sendMessage(anu.id,
+ { text: Kishbody,
+ contextInfo:{
+ mentionedJid:[num],
+ "externalAdReply": {"showAdAttribution": true,
+ "containsAutoReply": true,
+ "title": ` ${global.botname}`,
+ "body": `${ownername}`,
+ "previewType": "PHOTO",
+ "thumbnailUrl": ``,
+ "thumbnail": KishLft,
+"sourceUrl": `${link}`}}})
+}
+}
+} catch (err) {
+console.log(err)
+}
+}
+})	
+    Kish.downloadMediaMessage = async (message) => {
+        let mime = (message.msg || message).mimetype || ''
+        let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
+        const stream = await downloadContentFromMessage(message, messageType)
+        let buffer = Buffer.from([])
+        for await (const chunk of stream) {
+            buffer = Buffer.concat([buffer, chunk])
+        }
+
+        return buffer
+}
+}
+return startKish()
+
+let file = require.resolve(__filename)
+fs.watchFile(file, () => {
+    fs.unwatchFile(file)
+    console.log(chalk.redBright(`Update ${__filename}`))
+    delete require.cache[file]
+    require(file)
+})
+
+process.on('uncaughtException', function (err) {
+let e = String(err)
+if (e.includes("Socket connection timeout")) return
+if (e.includes("item-not-found")) return
+if (e.includes("rate-overlimit")) return
+if (e.includes("Connection Closed")) return
+if (e.includes("Timed Out")) return
+if (e.includes("Value not found")) return
+console.log('Caught exception: ', err)
+})
+      
