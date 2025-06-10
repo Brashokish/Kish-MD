@@ -16,4 +16,3 @@ COPY . .
 
 CMD ["node", "."]
 
-b
