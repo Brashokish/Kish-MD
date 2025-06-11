@@ -27,7 +27,7 @@ global.prefa = ['']
 
 //false=disable and true=enable
 global.welcome = false //auto welcome
-global.autoRecording = false //auto recording
+global.autoRecording = true //auto recording
 global.autoTyping = false //auto typing
 global.autorecordtype = false //auto typing + recording
 global.autoread = true //auto read messages
@@ -39,17 +39,17 @@ global.autostatus_react = true
 
 
 
-//reply messages
+// reply messages
 global.mess = {
-    done: '*here you go! \n\nCORTANA-AI\n\nBot link: \nhttps://github.com/EMMKASH/CORTANA-AI\n',
-    prem: '*This feature can be used by premium user only*',
-    admin: '*This feature can be used by admin only*',
-    botAdmin: '*This feature can only be used when the bot is a group admin* ',
-    owner: '*This feature can be used by owner only*',
-    group: '*This feature is only for groups*',
-    private: '*This feature is only for private chats*',
-    wait: '*In process...* ',    
-    error: '*Error!*',
+    done: '✅ *Here you go!*\n\n🤖 *Kish-MD*\n🔗 Bot link:\nhttps://github.com/Brashokish/Kish-MD',
+    prem: '💎 *This feature is for premium users only!*',
+    admin: '👑 *This feature is for group admins only!*',
+    botAdmin: '🤖 *I need to be *admin* to use this feature!*',
+    owner: '👑 *This feature is for the bot owner only!*',
+    group: '👥 *This feature is for groups only!*',
+    private: '💬 *This feature is for private chats only!*',
+    wait: '⏳ *Processing... Please wait.*',
+    error: '❗ *An error occurred!*'
 }
 
 global.thumb = fs.readFileSync('./Gallery/thumb.jpg')
