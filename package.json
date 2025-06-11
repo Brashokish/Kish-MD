@@ -1,6 +1,6 @@
 {
-    "name": "CORTANA-AI",
-    "version": "1.0.0",
+    "name": "KISH-MD",
+    "version": "2.1.0",
     "description": "WhatsApp Bot Using Nodejs",
     "main": "index.js",
     "type": "commonjs",
