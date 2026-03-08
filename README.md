@@ -15,12 +15,20 @@
   
 </div>
 
+<details>
+<summary>NOTICE!!! (TAP TO READ)</summary>
+
+- For Vps/Panel Deployment You must download the zip from panel sections or bot wont work on panel.
+
+<a href="https://github.com/Brashokish/Kish-MD/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/DOWNLOAD%20ZIP-yellow" alt="Panel Zip File" width="150"></a>
+  
+</details>
+
 ---
 
 # Setup For Deployment 👇
 
 ## Fork the repo
-
 <div align="center">
   <a href="https://github.com/Brashokish/Kish-MD/fork">
     <img title="Kish-MD" src="https://img.shields.io/badge/FORK%20Kish%20MD-FF5733?style=for-the-badge&logo=stackshare" />
