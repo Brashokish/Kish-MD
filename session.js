@@ -1,0 +1,2 @@
+export const BOT_SESSION = "YOUR SESSION ID STRING";
+
