@@ -10,7 +10,7 @@
 "required": true
 },
 
-```
+
 "OWNER_NUMBER": {
   "description": "Owner WhatsApp number without + (example: 254735905972).",
   "required": true
@@ -33,7 +33,7 @@
   "required": true,
   "value": "public"
 }
-```
+
 
 },
 
