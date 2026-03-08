@@ -67,6 +67,22 @@ Upload the `session id ` that you received to the `session.js` file.
   </a>
 </div>
 
+### Deploy to Bot-Hosting
+
+<div align="center">
+  <details>
+    <summary><img src="https://img.shields.io/badge/Bot--Hosting%20Deploy-9D4EFF?style=for-the-badge&logo=discord&logoColor=white&labelColor=black" width="220" height="38.45" /></summary>
+    <br>
+    <a href="https://github.com/Brashokish/Kish-MD/archive/refs/heads/main.zip">
+      <img src="https://img.shields.io/badge/📥%20DOWNLOAD%20FILES-9D4EFF?style=for-the-badge&logo=github&logoColor=white&labelColor=black" width="220" height="45" />
+    </a>
+    <br><br>
+    <a href="https://bot-hosting.net/?aff=1259151615210819614">
+      <img src="https://img.shields.io/badge/⚡%20SIGNUP%20%26%20DEPLOY-9D4EFF?style=for-the-badge&logo=discord&logoColor=white&labelColor=black" width="220" height="45" />
+    </a>
+  </details>
+</div>
+
 ### Deploy to Codespaces
 
 <div align="center">
