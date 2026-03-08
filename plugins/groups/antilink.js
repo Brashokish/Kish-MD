@@ -2,6 +2,7 @@ import { setGroup, removeGroup } from '../../lib/antilinkStore.js';
 
 export default {
   name: 'antilink',
+  category: 'group',
   group: true,
   admin: true,
   description: 'Enable anti link',
