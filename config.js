@@ -8,8 +8,7 @@ function parseOwners(value, fallback) {
 
 export default {
   prefix: '!',
-  mode: 'public',
-  geminiApiKey: "AIzaSyCx9mTjPhylwXwLH5Z2yYVoUUDW1MZ47u0",
+  mode: 'private',
   owners: ['254735905972'],
   fakePresence: true,
   autoViewStatus: true,
@@ -18,3 +17,4 @@ export default {
   chatbot: false,
   port: 8002,
 };
+
