@@ -1,8 +1,8 @@
 import axios from "axios";
 import fs from "fs";
 import unzipper from "unzipper";
-import fsExtra from "fs-extra";
 import { pipeline } from "stream/promises";
+import path from "path";
 import { exec } from "child_process";
 import util from "util";
 
@@ -14,12 +14,50 @@ const BRANCH = "main";
 
 const COMMIT_FILE = "./last_commit.txt";
 
+
 async function getLatestCommit() {
     const { data } = await axios.get(
         `https://api.github.com/repos/${OWNER}/${REPO}/commits/${BRANCH}`
     );
     return data;
 }
+
+
+/* ---------- SAFE COPY FUNCTION ---------- */
+
+function copyRecursive(src, dest) {
+
+    if (!fs.existsSync(dest)) {
+        fs.mkdirSync(dest, { recursive: true });
+    }
+
+    const entries = fs.readdirSync(src, { withFileTypes: true });
+
+    for (const entry of entries) {
+
+        const srcPath = path.join(src, entry.name);
+        const destPath = path.join(dest, entry.name);
+
+        /* skip unwanted folders */
+        if (
+            srcPath.includes("node_modules") ||
+            srcPath.includes(".git") ||
+            srcPath.includes("session") ||
+            srcPath.includes("auth")
+        ) continue;
+
+        if (entry.isDirectory()) {
+
+            copyRecursive(srcPath, destPath);
+
+        } else {
+
+            fs.copyFileSync(srcPath, destPath);
+
+        }
+    }
+}
+
 
 export default {
     name: "update",
@@ -36,7 +74,7 @@ export default {
 
         try {
 
-            /* ---------- CHECK FOR UPDATE ---------- */
+            /* ---------- CHECK ---------- */
 
             if (!action || action === "check") {
 
@@ -46,6 +84,7 @@ export default {
                 const latestCommit = data.sha;
 
                 let savedCommit = null;
+
                 if (fs.existsSync(COMMIT_FILE)) {
                     savedCommit = fs.readFileSync(COMMIT_FILE, "utf8").trim();
                 }
@@ -63,7 +102,8 @@ Type *.update install* to update`
                 );
             }
 
-            /* ---------- INSTALL UPDATE ---------- */
+
+            /* ---------- INSTALL ---------- */
 
             if (action === "install") {
 
@@ -72,7 +112,7 @@ Type *.update install* to update`
                 const data = await getLatestCommit();
                 const latestCommit = data.sha;
 
-                /* download repo zip */
+                /* download repo */
 
                 const response = await axios({
                     url: `https://github.com/${OWNER}/${REPO}/archive/refs/heads/${BRANCH}.zip`,
@@ -85,6 +125,7 @@ Type *.update install* to update`
                     fs.createWriteStream("./update.zip")
                 );
 
+
                 /* extract */
 
                 await fs.createReadStream("./update.zip")
@@ -93,35 +134,35 @@ Type *.update install* to update`
 
                 fs.unlinkSync("./update.zip");
 
+
                 const extracted = `./update-temp/${REPO}-${BRANCH}`;
 
-                /* replace current files */
 
-                await fsExtra.copy(extracted, "./", {
-                    overwrite: true,
-                    filter: (src) =>
-                        !src.includes("node_modules") &&
-                        !src.includes(".git")
-                });
+                /* copy files safely */
+
+                copyRecursive(extracted, "./");
+
 
                 /* cleanup */
 
-                fsExtra.removeSync("./update-temp");
+                fs.rmSync("./update-temp", { recursive: true, force: true });
 
-                /* save new commit */
+
+                /* save commit */
 
                 fs.writeFileSync(COMMIT_FILE, latestCommit);
 
+
                 /* install dependencies */
 
-                await execPromise("npm install --omit=dev").catch(()=>{});
+                await execPromise("npm install --omit=dev").catch(() => {});
+
 
                 await send("✅ Update complete. Restarting...");
 
-                // give time for message to send
-                await new Promise(r => setTimeout(r, 800));
+                await new Promise(r => setTimeout(r, 1000));
 
-                // crash so panel restarts bot
+
                 process.exit(1);
             }
 
