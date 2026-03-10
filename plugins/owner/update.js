@@ -1,54 +1,36 @@
 import axios from "axios";
 import fs from "fs";
-import unzipper from "unzipper";
-import { pipeline } from "stream/promises";
 import path from "path";
+import AdmZip from "adm-zip";
 import { exec } from "child_process";
-import util from "util";
-
-const execPromise = util.promisify(exec);
 
 const OWNER = "Brashokish";
 const REPO = "Kish-MD";
 const BRANCH = "main";
 
+const REPO_URL = `https://github.com/${OWNER}/${REPO}/archive/${BRANCH}.zip`;
 const COMMIT_FILE = "./last_commit.txt";
 
-
-async function getLatestCommit() {
-    const { data } = await axios.get(
-        `https://api.github.com/repos/${OWNER}/${REPO}/commits/${BRANCH}`
-    );
-    return data;
-}
-
-
-/* ---------- SAFE COPY FUNCTION ---------- */
-
-function copyRecursive(src, dest) {
+function copyFolderSync(src, dest, exclude = []) {
 
     if (!fs.existsSync(dest)) {
         fs.mkdirSync(dest, { recursive: true });
     }
 
-    const entries = fs.readdirSync(src, { withFileTypes: true });
+    const entries = fs.readdirSync(src);
 
     for (const entry of entries) {
 
-        const srcPath = path.join(src, entry.name);
-        const destPath = path.join(dest, entry.name);
+        const srcPath = path.join(src, entry);
+        const destPath = path.join(dest, entry);
 
-        /* skip unwanted folders */
-        if (
-            srcPath.includes("node_modules") ||
-            srcPath.includes(".git") ||
-            srcPath.includes("session") ||
-            srcPath.includes("auth")
-        ) continue;
+        if (exclude.some(e => srcPath.includes(e))) continue;
 
-        if (entry.isDirectory()) {
+        const stat = fs.statSync(srcPath);
 
-            copyRecursive(srcPath, destPath);
+        if (stat.isDirectory()) {
+
+            copyFolderSync(srcPath, destPath, exclude);
 
         } else {
 
@@ -58,117 +40,82 @@ function copyRecursive(src, dest) {
     }
 }
 
-
 export default {
     name: "update",
-    aliases: ["upgrade"],
-    description: "Check or install bot updates",
+    aliases: ["upgrade","sync"],
     owner: true,
 
-    async execute(sock, m, args) {
+    async execute(sock, m) {
 
         const send = (text) =>
-            sock.sendMessage(m.from, { text }, { quoted: m });
-
-        const action = args[0];
+            sock.sendMessage(m.from,{ text },{ quoted: m });
 
         try {
 
-            /* ---------- CHECK ---------- */
+            await send("🔍 Checking for updates...");
 
-            if (!action || action === "check") {
+            const { data } = await axios.get(
+                `https://api.github.com/repos/${OWNER}/${REPO}/commits/${BRANCH}`
+            );
 
-                await send("🔍 Checking updates...");
+            const latestCommit = data.sha;
 
-                const data = await getLatestCommit();
-                const latestCommit = data.sha;
+            let currentCommit = null;
 
-                let savedCommit = null;
-
-                if (fs.existsSync(COMMIT_FILE)) {
-                    savedCommit = fs.readFileSync(COMMIT_FILE, "utf8").trim();
-                }
-
-                if (savedCommit === latestCommit) {
-                    return send("✅ Bot is already up to date.");
-                }
-
-                return send(
-`📦 Update available
-
-${data.commit.message}
-
-Type *.update install* to update`
-                );
+            if (fs.existsSync(COMMIT_FILE)) {
+                currentCommit = fs.readFileSync(COMMIT_FILE,"utf8");
             }
 
-
-            /* ---------- INSTALL ---------- */
-
-            if (action === "install") {
-
-                await send("⬇️ Installing update...");
-
-                const data = await getLatestCommit();
-                const latestCommit = data.sha;
-
-                /* download repo */
-
-                const response = await axios({
-                    url: `https://github.com/${OWNER}/${REPO}/archive/refs/heads/${BRANCH}.zip`,
-                    method: "GET",
-                    responseType: "stream"
-                });
-
-                await pipeline(
-                    response.data,
-                    fs.createWriteStream("./update.zip")
-                );
-
-
-                /* extract */
-
-                await fs.createReadStream("./update.zip")
-                    .pipe(unzipper.Extract({ path: "./update-temp" }))
-                    .promise();
-
-                fs.unlinkSync("./update.zip");
-
-
-                const extracted = `./update-temp/${REPO}-${BRANCH}`;
-
-
-                /* copy files safely */
-
-                copyRecursive(extracted, "./");
-
-
-                /* cleanup */
-
-                fs.rmSync("./update-temp", { recursive: true, force: true });
-
-
-                /* save commit */
-
-                fs.writeFileSync(COMMIT_FILE, latestCommit);
-
-
-                /* install dependencies */
-
-                await execPromise("npm install --omit=dev").catch(() => {});
-
-
-                await send("✅ Update complete. Restarting...");
-
-                await new Promise(r => setTimeout(r, 1000));
-
-
-                process.exit(1);
+            if (latestCommit === currentCommit) {
+                return send("✅ Bot is already up to date.");
             }
 
-        } catch (err) {
+            await send("⬇️ Downloading latest version...");
 
-            await send(`❌ Update failed\n${err.message}`);
+            const zipPath = "./update.zip";
+            const { data: zipData } = await axios.get(REPO_URL,{
+                responseType:"arraybuffer"
+            });
+
+            fs.writeFileSync(zipPath,zipData);
+
+            const zip = new AdmZip(zipPath);
+            const extractPath = "./update-temp";
+
+            zip.extractAllTo(extractPath,true);
+
+            const sourcePath = path.join(extractPath,`${REPO}-${BRANCH}`);
+            const destinationPath = "./";
+
+            const exclude = [
+                "node_modules",
+                ".git",
+                "auth",
+                "session"
+            ];
+
+            copyFolderSync(sourcePath,destinationPath,exclude);
+
+            fs.writeFileSync(COMMIT_FILE,latestCommit);
+
+            fs.unlinkSync(zipPath);
+            fs.rmSync(extractPath,{ recursive:true, force:true });
+
+            await send("📦 Installing dependencies...");
+
+            exec("npm install --omit=dev");
+
+            await send("✅ Update complete\n♻️ Restarting bot...");
+
+            setTimeout(()=>{
+                process.exit(0);
+            },2000);
+
+        } catch(err){
+
+            console.log(err);
+
+            send(`❌ Update failed\n\n${err.message}`);
 
         }
     }
