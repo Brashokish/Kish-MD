@@ -1,20 +1,20 @@
-global.botMode ??= 'public';
+import { saveSettings } from "../../lib/settings.js"
 
 export default {
-  name: 'mode',
+  name: "mode",
   owner: true,
 
   async execute(sock, m, args) {
-    const jid = m.key.remoteJid;
-    const mode = (args[0] || '').toLowerCase();
 
-    if (!['public', 'private'].includes(mode))
-      return sock.sendMessage(jid, { text: 'Usage: .mode public/private' }, { quoted: m });
+    const mode = (args[0] || "").toLowerCase()
 
-    global.botMode = mode;
+    if (!["public", "private"].includes(mode))
+      return m.reply("Usage: mode public / private")
 
-    await sock.sendMessage(jid, {
-      text: `🤖 Bot mode set to *${mode.toUpperCase()}*`
-    }, { quoted: m });
+    global.botMode = mode
+
+    saveSettings({ mode })
+
+    m.reply(`🤖 Bot mode set to ${mode}`)
   }
-};
+}
