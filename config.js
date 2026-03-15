@@ -8,13 +8,12 @@ function parseOwners(value, fallback) {
 
 export default {
   prefix: '!',
-  mode: 'private',
-  owners: ['254735905972'],
+  mode: 'public',
+  owners: ['YOUR PHONE NUMBER'],
   fakePresence: true,
   autoViewStatus: true,
   autoReactStatus: true,
   antiDelete: true,
-  chatbot: false,
   port: 8002,
 };
 
