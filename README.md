@@ -44,7 +44,7 @@ Upload the `session id ` that you received to the `session.js` file.
 ### Pair with WhatsApp
 
 <div align="center">
-  <a href="https://pair.kishtechsite.online/">
+  <a href="https://pair.kishtech.co.ke/">
     <img title="Kish-MD Session ID" src="https://img.shields.io/badge/GET%20SESSION-FF5733?style=for-the-badge&logo=msi&logoColor=white" width="220" height="38.45" />
   </a>
 </div>
